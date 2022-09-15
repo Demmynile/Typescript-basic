@@ -145,6 +145,114 @@ let array2 : {
 }
 
 
+// union types with literals
+
+let rainbowColor : "blue" | "orange" | "green" = "blue"
+
+rainbowColor = "orange"
+
+
+ 
+//enum 
+enum RainbowTypes {
+	RED,
+	ORANGE,
+	YELLOW,
+	BLUE,
+	INDIGO,
+	VIOLET
+}
+
+let rainbowColor2: RainbowTypes = RainbowTypes.RED
+
+
+//HOW TO MAKE THINGS OPTIONAL (?.)
+
+let obj5: {
+	property: string
+	property2?: string
+} = {
+	property: "",
+	property2: "adw"
+}
+
+//TYPES AND INTERFACES
+
+//looking rough
+const obj9 : {
+	firstName : string,
+	lastName : string,
+	age : number,
+	gender: boolean
+} = {
+	firstName : "",
+	lastName : "",
+	age : 20,
+	gender: true
+}
+
+//then looking good using interfaces
+
+interface Person {
+	firstName : string,
+	lastName : string,
+	age : number,
+	gender: boolean
+}
+const obj3: Person = {
+	firstName : "",
+	lastName : "",
+	age : 20,
+	gender: true
+}
+
+
+// using types 
+
+type Person2 = {
+	firstName : string,
+	lastName : string,
+	age : number,
+	gender: boolean
+}
+
+const obj4 : Person2 = {
+	firstName : "",
+	lastName : "",
+	age : 20,
+	gender: true
+}
+
+// assignning a type as a type.
+type Person4 = string
+
+const obj8 :Person4 = "good"
+
+// array of an object
+
+// type is best used when you specify it with other type like array of an object
+
+type Person5 = {
+	firstName : string,
+	lastName : string,
+	age : number,
+	gender: boolean
+}[]
+
+const ade : Person5 = [ 
+	{
+	firstName : "",
+	lastName : "",
+	age : 20,
+	gender: true
+}
+]
+
+
+//classes
+
+
+
 
 
 
