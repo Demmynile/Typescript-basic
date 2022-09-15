@@ -90,7 +90,66 @@ arrayOfObject.push({
 	gender : true
 })
 
+ //Arrays of Arrays
 
+const arrayOfArrays : string[][] = [["ademola" , "balogun" , "adewale"] , ["kenny","taiwo"]]
+
+const arrayOfArrayOfArray : string[][][] = [[[""]]]
+
+//Functions
+
+//normal function without typescript
+const add = (num1 , num2) => {
+	return num1 + num2
+}
+
+add(true , {})
+
+
+//function with typescript
+const subtract = (num1: number , num2: number) : Boolean => {
+    return num1 < num2
+	// console.log("this must return a boolean based on what you specify to typescript")
+}
+
+subtract(20 , 20)
+
+//boolean in this function is the return after operations
+
+//always specify what you want , never let javascript dictate
+
+//void // this is when you didnt want to return anything
+
+const log = () : void => {
+	console.log("hello")
+}
+
+
+//Union Types in Typescript
+
+let numberOfString : (string | number | boolean | Object | null | undefined) = "balogun ademola"
+
+numberOfString = {}
+
+
+// using union types with array
+
+let array1 : (string | number)[] = ["" , 2 , 9]
+
+
+// using union types with objects
+
+let array2 : {
+	first_name : string,
+	phone : string | number,
+}
+
+
+
+
+
+
+ 
 
 
 
