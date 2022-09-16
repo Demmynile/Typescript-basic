@@ -192,7 +192,7 @@ const obj9 : {
 }
 
 //then looking good using interfaces
-
+// there are only used with object.
 interface Person {
 	firstName : string,
 	lastName : string,
