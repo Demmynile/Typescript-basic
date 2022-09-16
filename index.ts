@@ -99,11 +99,11 @@ const arrayOfArrayOfArray : string[][][] = [[[""]]]
 //Functions
 
 //normal function without typescript
-const add = (num1 , num2) => {
-	return num1 + num2
-}
+// const add = (num1 , num2) => {
+// 	return num1 + num2
+// }
 
-add(true , {})
+// add(true , {})
 
 
 //function with typescript
@@ -257,7 +257,7 @@ class Car {
 	private peopleInPolicy: string[] = []
     private readonly manufactorDate : string = "2019-01-11"
 
-	constructor(model , color , age){
+	constructor(model :string , color : string , age : number){
 		this.model = model
 		this.color = color
 		this.age = age
@@ -298,7 +298,7 @@ class Cap {
 		}
 
 		addToPolicy(name: string){
-            this.peopleInPolicy.push(name + this.manufactorDate)
+            this.peopleInPolicy.push(name + this)
 			
 		}
 
@@ -306,7 +306,7 @@ class Cap {
 
 
 
- const myJaguar = new Car("jaguar" , "green" , 2) 
+ const myJaguar = new Cap("jaguar" , "green" , 2) 
  myJaguar.describe()
  myJaguar.addToPolicy("ademola")
 //  myJaguar.peopleInPolicy.push("demola")
