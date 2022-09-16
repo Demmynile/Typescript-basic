@@ -250,17 +250,63 @@ const ade : Person5 = [
 
 
 //classes
+class Car {
+	model : string
+	color : string
+	public age : number
+	private peopleInPolicy: string[] = []
+    private readonly manufactorDate : string = "2019-01-11"
+
+	constructor(model , color , age){
+		this.model = model
+		this.color = color
+		this.age = age
+	}
+		describe(){
+			console.log(`A ${this.age} year old ${this.color} ${this.model}`)
+		}
+
+		addToPolicy(name: string){
+            this.peopleInPolicy.push(name)
+		}
+
+	}
 
 
 
-
-
-
+const myBanter = new Car("jaguar" , "green" , 2) 
+ myBanter.describe()
+ myBanter.addToPolicy("ademola")
+//  myJaguar.peopleInPolicy.push("demola")
 
  
 
 
+//cleaner
+class Cap {
 
- 
+	private peopleInPolicy: string[] = []
+    private readonly manufactorDate : string = "2019-01-11"
+
+	constructor(public model:string , public color: string , public age : number){
+		this.model = model
+		this.color = color
+		this.age = age
+	}
+		describe(){
+			console.log(`A ${this.age} year old ${this.color} ${this.model}`)
+		}
+
+		addToPolicy(name: string){
+            this.peopleInPolicy.push(name + this.manufactorDate)
+			
+		}
+
+	}
 
 
+
+ const myJaguar = new Car("jaguar" , "green" , 2) 
+ myJaguar.describe()
+ myJaguar.addToPolicy("ademola")
+//  myJaguar.peopleInPolicy.push("demola")
